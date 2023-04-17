@@ -1,3 +1,4 @@
+from datetime import timedelta
 from pathlib import Path, os
 from dotenv import load_dotenv
 
@@ -138,6 +139,7 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
    'AUTH_HEADER_TYPES': ('JWT',),
+   'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
 }
 
 AUTH_USER_MODEL = 'core.User'
